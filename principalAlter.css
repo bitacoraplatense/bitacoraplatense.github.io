@@ -743,3 +743,438 @@ body, .contenedor, .pie * {
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
     overflow: hidden; 
 }
+/* ======================================================= */
+/* MEDIA QUERY: MÓVIL Y TABLET (HASTA 768PX) */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- General / Contenedor --- */
+    .contenedor {
+        /* Se usa para evitar que el contenido se pegue a los bordes en móviles */
+        padding: 0; 
+    }
+
+    /* --- Banner / Navegación --- */
+    .banner {
+        /* Disminuir la altura del banner */
+        height: 4.2rem; 
+    }
+    #logo a img {
+        /* Reducir el tamaño del logo */
+        width: 3rem;
+        height: 3rem;
+    }
+    
+
+
+    #listaArt ul {
+        /* Reducir el espacio entre los elementos de la lista */
+        gap: 4vw; 
+    }
+    #listaArt li {
+        /* Reducir el tamaño de la fuente de la navegación */
+        font-size: 0.8rem; 
+    }
+.presentacionPagPrincipal {
+    margin: 4rem 0 0 0; 
+    position: relative;
+    width: 100%;
+    height: 70vw;  
+    box-shadow: 0 3.5rem 4rem -4rem rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+}
+    /* --- Título de Sección (h1) --- */
+    .columna h1 {
+        font-size: 2rem; /* Reducir el título de las categorías */
+        text-align: center; /* Centrar el título en móvil */
+    }
+
+    /* --- Sección Quiénes Somos --- */
+    .quienesSomos p {
+        max-width: 90%; /* Aumentar el ancho del texto para ocupar más espacio */
+        font-size: 1.8vh;
+    }
+    .quienesSomos h1 {
+        font-size: 4vh;
+    }
+    
+    /* --- Contenedor de Eventos (Página Principal) --- */
+    #contenedor-eventos {
+        /* ✅ CLAVE: Cambiar a 2 columnas para móviles/tablets */
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem; 
+        margin: 2rem 0;
+    }
+    .evento-tarjeta {
+        /* Adaptar el tamaño de las tarjetas en función del ancho de la pantalla */
+        width: 40vw; 
+        height: 55vw; /* Mantener la proporción */
+        margin: 0 0 8rem 0;
+    }
+
+
+/* Estilos de la imagen dentro de la tarjeta */
+.evento-tarjeta img {
+    border-radius: 2rem; 
+    margin: 1rem 0 0 0; 
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    max-width: 100%; 
+    width: 100%; /* Ocupa todo el ancho de la celda de la cuadrícula */
+    height: 100%; /* Altura fija para mantener el aspecto visual */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+
+    /* --- Sección de Eventos Destacados --- */
+    .destacados-contenedor {
+        gap: 1rem;
+    }
+    .destacado-tarjeta {
+        width: 38vw; /* Mostrar 2 tarjetas por fila */
+        height: 50vw;
+    }
+    
+    /* --- Sección Mapa (Eventos Cerca Tuyo) --- */
+    .mapa-row {
+        /* ✅ CLAVE: Cambiar a columna vertical en móvil */
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .tituloMapa {
+        font-size: 2rem;
+    }
+    #mapaEventos {
+        /* Asegurarse de que el mapa ocupe un buen espacio en el ancho */
+        height: 40vh; 
+        width: 90vw; 
+    }
+
+    /* --- Footer (Pie de Página) --- */
+    .pie {
+        height: auto; /* Altura automática */
+        flex-direction: row;
+        padding: 1vh 0;
+    }
+    .pie p {
+        font-size: 1.2vh;
+    }
+    .pie-izquierda, .pie-derecha {
+        padding: 0;
+    }
+    .pie-izquierda img {
+        width: 2vh;
+        height: 2vh;
+        margin: 0.5rem;
+    }
+    .pie-derecha {
+    padding: 0;
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end;  
+}
+
+.pie-derecha input[type="email"] {
+    height: 2vh;
+    width: 16.5vh;
+    border: 0 solid #2d3a6900;
+    border-radius: 0.3rem;
+}
+.pie-derecha .newsletter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+    .pie-centro {
+        margin-bottom: 0.5rem;
+    }
+.modal-contenido {
+    background-color: #CDD3EA;  
+    padding: 4rem 2rem 0 2rem;
+    width: 33rem;    
+    border-radius: 2rem;  
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    position: relative;
+    font-family: 'Archivo', sans-serif;
+}
+
+
+/* Contenido del Modal Quiénes Somos (más ancho y con scroll) */
+.modal-contenido-quienes-somos {
+    background-color: #CDD3EA;  
+    padding: 1rem 2rem 1rem 2rem;
+    width: 75vw;  
+    height: 70vh; 
+    border-radius: 2rem;  
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    position: relative;
+    font-family: 'Archivo', sans-serif;
+    overflow-y: auto;  
+}
+
+/* Botón de cerrar (X) */
+.cerrar-modal {
+    color: #000;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+}
+
+
+/* Estilos internos de Quiénes Somos (restaurados) */
+.quienes-somos-contenido h1 {
+    font-size: 2rem;
+    color: #000000;  
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+.quienes-somos-contenido h2 {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
+    margin-top: 1.2rem;
+}
+
+.quienes-somos-contenido p {
+    font-size: 0.7rem;
+    line-height: 1.8;
+    color: #000000;
+}
+.equipo-fotos {
+    display: flex;
+    justify-content: space-around;  
+    align-items: flex-start;
+    flex-wrap: wrap;  
+    gap: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.miembro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.miembro img {
+    width: 5rem;  
+    height: 5rem;
+    border-radius: 50%;  
+    object-fit: cover;
+    margin-bottom: 0.3rem;
+}
+
+.miembro p {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.input-grupo {
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo de la Etiqueta (columna izquierda) */
+.input-grupo label {
+    width: 6rem;
+    text-align: left; 
+    padding-top: 1rem; 
+    padding-right: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Estilo de los Campos de Entrada/Texto (columna derecha) */
+.input-grupo input[type="email"],
+.input-grupo textarea {
+    flex-grow: 1; 
+    padding: 0.7rem 0.5rem;
+    border: 0;
+    border-radius: 0.5rem; 
+    font-size: 0.9rem;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Ajuste del Área de Texto */
+.input-grupo textarea {
+    height: 2.5rem; 
+    resize: vertical; 
+}
+
+/* Contenedor del Botón (Centrado) */
+.input-grupo.boton-envio {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 1.5rem; 
+    width: 100%;
+}
+
+/* Estilos para el botón de Envío */
+#enviar-propuesta {
+    background-color: #2D3A69;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.evento-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 6rem 0;
+    gap: 1rem;
+    font-family: 'Archivo', sans-serif;
+    align-items: flex-start;
+}
+
+.evento-imagen {
+    width: 25rem;
+    height: 25rem;
+}
+
+.evento-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 2rem;
+    box-shadow: 0 0 19rem rgba(0, 0, 0, 0.3);
+}
+
+.evento-contenido {
+    height: 43rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+
+.evento-titulo {
+    font-family: 'archivo', sans-serif;
+    font-size: 1rem;
+    color: #2D3A69;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    margin: 0 0 0 0;
+}
+
+
+.evento-descripcion {
+    white-space: pre-wrap;
+    font-family: 'archivo', sans-serif;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    color: #2D3A69;
+    margin: 0.5rem 0 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 20; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
+}
+
+.evento-detalles {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0;
+    border-top: 0.1rem solid #2d3a6981;
+    padding-top: 1rem;
+}
+
+.detalle-mapa-icono {
+    width: 25vw;
+    height: 20vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.mini-mapa {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.detalle-lista {
+    width: 100%;
+    padding: 0;
+}
+
+.detalle-lista p {
+    font-family: 'archivo', sans-serif;
+    font-size: 1.2vh;
+    margin: 0 0 0 0;
+    line-height: 1rem;
+    color: #2D3A69;
+}
+/* Estilo para el enlace de Entradas/Info */
+.enlace-entradas {
+    text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+    font-family: 'archivo', sans-serif; /* Mantiene la fuente 'archivo' */
+    font-size: 1.2vh; /* Mantiene el tamaño de fuente 1.7vh */
+    color: #2D3A69; 
+}
+
+.eventos-destacados-seccion {
+    max-width: 100%;
+    margin: 5.5rem auto 5.5rem auto; /* Centrado y con margen superior/inferior */
+    text-align: center;
+}
+
+.destacados-titulo {
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #2D3A69;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.destacados-contenedor {
+    flex-direction: row;
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 0.5rem; 
+    flex-wrap: wrap; /* Para responsividad */
+}
+
+.destacado-tarjeta {
+    width: 30vw; /* Ancho fijo para cada tarjeta, ajusta si es necesario */
+    height: 35vh;
+    overflow: hidden;
+    border-radius: 2rem;
+    transition: transform 1s ease;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.destacado-tarjeta:hover {
+    transform: scale(1.03); 
+    filter: brightness(1.1);
+}
+
+.destacado-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra la tarjeta sin distorsionarse */
+    display: block;
+}
+
+}
