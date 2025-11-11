@@ -1,0 +1,745 @@
+.contenedor{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------EN TODAS LAS PÁGINAS, BANNER Y BACKGROUND----------------------------------*/
+
+body{
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url(background.png);
+    position: relative;
+    box-sizing: border-box; 
+}
+
+body, .contenedor, .pie * {
+    box-sizing: border-box; 
+}
+
+.banner {
+    height: 5rem; 
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+    background-color: #CDD3EA;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 9999;
+}
+
+/* ------------------- CONTENEDOR PRINCIPAL ------------------- */
+.quienesSomos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1.5rem 0 4rem 0; 
+    text-align: center;
+    max-width: 100%; 
+    padding: 0; 
+}
+
+/* ------------------- ESTILOS BASE DE TEXTO ------------------- */
+
+.quienesSomos h1,
+.quienesSomos p {
+    font-family:'archivo', sans-serif;
+    color: #ff751f; 
+    transition: color 0.3s ease; 
+}
+
+.quienesSomos h1 {
+    /* Mantenemos display: inline-block para que ocupe solo el ancho del texto si es necesario */
+    display: inline-block; 
+    font-size: 5vh;
+    font-weight: 800;
+}
+
+.quienesSomos p {
+    display: block; 
+    margin: 0 auto 0 auto;
+    font-size: 2.1vh; 
+    max-width: 50%; 
+    text-align: center;
+    justify-content: center; 
+}
+
+.quienesSomos:hover h1 {
+    color: #8370de; 
+}
+
+.quienesSomos:hover p {
+    color: #8370de; 
+}
+
+.quienesSomos a {
+    text-decoration: none; 
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+#logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0; 
+}
+
+#logo a img {
+    width: 5rem; 
+    height: 5rem;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+#logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.7) 
+}
+
+
+.logoArt p{
+    
+    color: #2D3A69; 
+    font-family: 'Archivo', sans-serif;
+    text-align: left;  
+    margin: 0.5rem 0  0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.logoArt h2{
+    
+    color: #8370de; 
+    font-family: 'Archivo', sans-serif;
+    text-align: left;  
+    margin: 0.5rem 0 0 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#contCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 4vw; 
+    width: auto;
+    max-width: 100%; 
+    padding: 0;
+}
+
+/* LISTA DE ARTÍCULOS */
+#listaArt {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ 
+#listaArt ul {
+    display: flex;
+    /* ✅ CLAVE: Espacio entre palabras escala con el ancho de la pantalla */
+    gap: 6vw; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#listaArt ul a{
+    display: inline-block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    color: inherit;
+    text-decoration: none;
+}
+
+#listaArt li {
+    display: inline;
+    font-family:'archivo', sans-serif;
+    color: #2D3A69;
+    margin: 0; 
+    font-size: 1.5rem; 
+    font-weight: 600;
+}
+
+#listaArt li:hover a{
+    color: #e2a9f1; 
+    transform: scale(1.05);
+}
+
+#contCenter a{
+    color: #000000;
+    text-decoration: none;
+}
+
+/*-------------------PÁG PRINCIPAL (sin cambios)-------------------*/
+.presentacionPagPrincipal {
+    margin: 5rem 0 0 0; 
+    position: relative;
+    width: 100%;
+    height: 35vw; 
+    max-height: 100%; 
+    box-shadow: 0 3.5rem 4rem -4rem rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+}
+
+/* Establecer el ancho de la imagen */
+.presentacionPagPrincipal img{
+    opacity: 1; 
+    transition: opacity 1s ease-in-out; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+/* CLASE PARA OCULTAR LA IMAGEN */
+.fade-out {
+    opacity: 0 !important;
+}
+
+/* CLASE PARA MOSTRAR LA IMAGEN */
+.fade-in {
+    opacity: 1 !important;
+}
+
+.principalEsOe{
+    /* Deja un margen superior para compensar el banner fijo */
+    padding-top: 5rem; 
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 auto 4rem auto; /* Ajustado el margen superior */
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.columna{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2.5rem 0 0 0;
+    width: 85%; /* Asegura que la columna tenga un ancho definido para centrar los eventos */
+    max-width: 90%;
+}
+
+
+/* ======================================================= */
+/* ✅ MODIFICACIÓN DE EVENTOS (USO DE GRID) */
+/* ======================================================= */
+
+#contenedor-eventos {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 4.5rem; /* Espacio entre las filas y las columnas */
+    justify-items: center; 
+    margin: 2rem 0 4rem 0; 
+}
+
+/* Estilo de la tarjeta individual */
+.evento-tarjeta {
+    width: 38vh;
+    height: 50vh;
+    margin: 0 0 2rem 0;
+}
+
+/* Estilos de la imagen dentro de la tarjeta */
+.evento-tarjeta img {
+    border-radius: 2rem; 
+    margin: 0; 
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    max-width: 100%; 
+    width: 100%; /* Ocupa todo el ancho de la celda de la cuadrícula */
+    height: 100%; /* Altura fija para mantener el aspecto visual */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.evento-tarjeta img:hover{
+    transform: scale(1.03); 
+    box-shadow: 0 0 2rem #2D3A69; /* Color de sombra para el hover */
+}
+
+/* Estilo para el título de la categoría */
+.columna h1 {
+    color: #ff751f; 
+    font-family: 'Archivo', sans-serif;
+    text-align: left;  
+    margin: 1rem 0 1rem 0; /* Margen ajustado */
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+
+/* ======================================================= */
+/* FIN DE MODIFICACIÓN DE EVENTOS (USO DE GRID) */
+/* ======================================================= */
+
+
+/* ------------------- FOOTER (PIE DE PÁGINA) ------------------- */
+
+.pie{
+    /* ✅ CLAVE: 8% de la altura del Viewport */
+    height: 9vh;
+    width: 100%;
+    margin: 0 0 0 0;
+    background-color: #CDD3EA;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    padding: 0; 
+    position: relative;
+}
+
+/* Párrafo dentro del pie (Correo electrónico) */
+.pie p {
+    font-family: 'archivo', sans-serif;
+    /* ✅ CLAVE: Fuente escala con la altura de la pantalla */
+    font-size: 2vh; 
+    color: #2a3666;
+    margin: 0;  
+    padding: 0;
+}
+
+/* Contenedor central (para centrar el correo) */
+.pie-centro {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+/* Contenedor de iconos de redes (alineado al inicio) - MODIFICADO */
+.pie-izquierda{
+    padding: 0 10rem; 
+}
+.pie-izquierda img{
+    width: 4vh;
+    height: 4vh;
+    margin: 1rem;
+}
+
+
+/* Contenedor de newsletter (alineado al final) - MODIFICADO */
+.pie-derecha {
+    padding: 0 10rem;
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end;  
+}
+
+/* Estilos para el formulario en el pie */
+.pie-derecha input[type="email"] {
+    height: 2.5vh;
+    width: 27vh;
+    border: 0 solid #2d3a6900;
+    border-radius: 0.3rem;
+    margin-top: 0.2rem;
+    margin-right: 0;  
+}
+.pie-derecha .newsletter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+
+.pie-derecha button[type="submit"] {
+    display: none; 
+}
+
+
+.evento-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 70rem;
+    margin: 9.5rem auto 2.5rem auto;
+    gap: 5rem;
+    font-family: 'Archivo', sans-serif;
+    /* 1. Establece la alineación a la parte superior (ya estaba) */
+    align-items: flex-start;
+    /* 2. ✅ Fuerza una altura mínima para que los hijos se estiren */
+    min-height: 65vh;
+}
+
+.evento-imagen {
+    width: 30rem;
+    height: 43rem;
+}
+
+.evento-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 2rem;
+    box-shadow: 0 0 19rem rgba(0, 0, 0, 0.3);
+}
+
+.evento-contenido {
+    width: 50%;
+    height: 43rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+
+.evento-titulo {
+    font-family: 'archivo', sans-serif;
+    font-size: 2.5rem;
+    color: #2D3A69;
+    font-weight: 800;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    margin: 0 0 0 0;
+}
+
+#evento-encabezado {
+    margin: 0;
+    padding: 0;
+}
+
+.evento-descripcion {
+    white-space: pre-wrap;
+    font-family: 'archivo', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    color: #2D3A69;
+    margin: 1.5rem 0 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 9; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
+}
+
+.evento-detalles {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0;
+    gap: 1rem;
+    border-top: 0.1rem solid #2d3a6981;
+    padding-top: 1rem;
+}
+
+.detalle-mapa-icono {
+    width: 15vw;
+    height: 24vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.mini-mapa {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.detalle-lista {
+    width: 100%;
+    padding: 0;
+}
+
+.detalle-lista p {
+    font-family: 'archivo', sans-serif;
+    font-size: 1.7vh;
+    margin: 1rem 0 0 0;
+    line-height: 1.5rem;
+    color: #2D3A69;
+}
+/* Estilo para el enlace de Entradas/Info */
+.enlace-entradas {
+    text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+    font-family: 'archivo', sans-serif; /* Mantiene la fuente 'archivo' */
+    font-size: 1.7vh; /* Mantiene el tamaño de fuente 1.7vh */
+    color: #2D3A69; 
+}
+
+/* Efecto visual al pasar el mouse (hover) */
+.enlace-entradas:hover {
+    color: #4C5D9F; /* Opcional: Un tono un poco más claro del mismo azul para el feedback visual */
+    border-bottom: 2px solid #4C5D9F; /* Cambia el subrayado a ese tono más claro */
+    cursor: pointer;
+}
+
+.eventos-destacados-seccion {
+    max-width: 100%;
+    margin: 5.5rem auto 5.5rem auto; /* Centrado y con margen superior/inferior */
+    text-align: center;
+}
+
+.destacados-titulo {
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #2D3A69;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.destacados-contenedor {
+    flex-direction: row;
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 1.5rem; 
+    flex-wrap: wrap; /* Para responsividad */
+}
+
+.destacado-tarjeta {
+    width: 19vw; /* Ancho fijo para cada tarjeta, ajusta si es necesario */
+    height: 52vh;
+    overflow: hidden;
+    border-radius: 2rem;
+    transition: transform 1s ease;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.destacado-tarjeta:hover {
+    transform: scale(1.03); 
+    filter: brightness(1.1);
+}
+
+.destacado-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra la tarjeta sin distorsionarse */
+    display: block;
+}
+
+.modal {
+    display: none; 
+    position: fixed;  
+    z-index: 10000;  
+    left: 0;
+    top: 0;
+    width: 100%;  
+    height: 100%;
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.4);  
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ocultador por defecto (usado en HTML) */
+.modal-hidden {
+    display: none !important;
+}
+
+/* Contenido del Modal de Evento (la caja visible) */
+.modal-contenido {
+    background-color: #CDD3EA;  
+    padding: 4rem 2rem 0 2rem;
+    width: 33rem;    
+    border-radius: 2rem;  
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    position: relative;
+    font-family: 'Archivo', sans-serif;
+}
+
+
+/* Contenido del Modal Quiénes Somos (más ancho y con scroll) */
+.modal-contenido-quienes-somos {
+    background-color: #CDD3EA;  
+    padding: 1rem 2rem 1rem 2rem;
+    width: 44vw;  
+    height: 80vh; 
+    border-radius: 2rem;  
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    position: relative;
+    font-family: 'Archivo', sans-serif;
+    overflow-y: auto;  
+}
+
+/* Botón de cerrar (X) */
+.cerrar-modal {
+    color: #000;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #2D3A69; 
+    text-decoration: none;
+}
+
+/* Estilos internos de Quiénes Somos (restaurados) */
+.quienes-somos-contenido h1 {
+    font-size: 2.5rem;
+    color: #000000;  
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+.quienes-somos-contenido h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 400;
+    margin-top: 1.2rem;
+}
+
+.quienes-somos-contenido p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+}
+.equipo-fotos {
+    display: flex;
+    justify-content: space-around;  
+    align-items: flex-start;
+    flex-wrap: wrap;  
+    gap: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.miembro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.miembro img {
+    width: 5rem;  
+    height: 5rem;
+    border-radius: 50%;  
+    object-fit: cover;
+    margin-bottom: 0.3rem;
+}
+
+.miembro p {
+    font-size: 0.62rem;
+    font-weight: 600;
+}
+
+/* ======================================================= */
+/* ESTILOS DEL FORMULARIO DE EVENTOS (Alineación Desktop) */
+/* ======================================================= */
+
+/* Contenedor de cada fila (Etiqueta + Campo) */
+.input-grupo {
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo de la Etiqueta (columna izquierda) */
+.input-grupo label {
+    width: 15rem;
+    text-align: left; 
+    padding-top: 1rem; 
+    padding-right: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Estilo de los Campos de Entrada/Texto (columna derecha) */
+.input-grupo input[type="email"],
+.input-grupo textarea {
+    flex-grow: 1; 
+    padding: 0.7rem 0.5rem;
+    border: 0;
+    border-radius: 0.5rem; 
+    font-size: 0.9rem;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Ajuste del Área de Texto */
+.input-grupo textarea {
+    height: 4rem; 
+    resize: vertical; 
+}
+
+/* Contenedor del Botón (Centrado) */
+.input-grupo.boton-envio {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 1.5rem; 
+    width: 100%;
+}
+
+/* Estilos para el botón de Envío */
+#enviar-propuesta {
+    background-color: #2D3A69;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#enviar-propuesta:hover {
+    background-color: #ffffff;
+    color: #2D3A69;
+}
+
+/* ------------------- SECCIÓN DEL MAPA - FILA (ROW) ------------------- */
+
+/* ⭐️ 1. CONTENEDOR PRINCIPAL (Define la fila) ⭐️ */
+.mapa-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente el mapa y el título */
+    justify-content: center; /* Centra todo el bloque (título + mapa) horizontalmente */
+    width: 100%;
+    margin: 4rem 0; 
+    gap: 5rem; /* Espacio entre el título y el mapa */
+}
+
+/* ⭐️ 2. CONTENEDOR DEL TÍTULO ⭐️ */
+.eventosCercaTuyo-titulo {
+    flex-shrink: 0; /* Asegura que el texto no se comprima */
+    text-align: center;
+ }
+
+.tituloMapa {
+    font-family: 'archivo', sans-serif;
+    color: #8370de; 
+    font-size: 3rem; 
+    font-weight: 600;
+    margin: 0; 
+    line-height: 1.2;
+}
+
+
+/* ⭐️ 3. CONTENEDOR DEL MAPA (Define el tamaño) ⭐️ */
+.eventosCercaTuyo-mapa {
+    display: flex;
+ 
+}
+
+#mapaEventos {
+    /* Las dimensiones para el diseño horizontal */
+    height: 40vh; 
+    width: 40vw; /* Ajusta este ancho */
+    max-width: 100%; 
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}

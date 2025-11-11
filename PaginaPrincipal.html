@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Platense</title>   
+    <link rel="stylesheet" href="principalAlter.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""/>
+</head>
+
+<body>  
+    <div class="contenedor">
+        <!--BANNER -->
+            <div class="banner">
+                
+           
+            <div id="contCenter">
+                 <div id="logo"><a href="PaginaPrincipal.html"><img src="pagina articulos/imagenes/bp azul.png" alt="logo"></a>
+            </div>
+                  <div id="listaArt"><ul> 
+                    <li><a href="pagina articulos/seccion-eventos.html?cat=musica">música</a></li>
+                    <li><a href="pagina articulos/seccion-eventos.html?cat=artecultura">arte y cultura</a></li>
+                    <li><a href="pagina articulos/seccion-eventos.html?cat=gastronomia">gastronomia</a></li>
+                <li><a href="#" id="abrir-modal-evento">tu evento</a></li>
+              
+              </ul>
+                 </div>
+            </div>           
+    </div>
+    <div id="modal-evento" class="modal modal-hidden">
+    
+    <div class="modal-contenido">
+        
+        <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+
+        <form id="form-evento" 
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZdFmkbHlVbUXZ8RP5zO3IuVVSpNlegd7Scq5xKrTO0oZKrw/formResponse" 
+              method="post"
+              target="hidden_iframe_evento"> 
+            
+            <div class="input-grupo">
+                <label for="email-evento">Email:</label>
+                <input type="email" id="email-evento" name="entry.1019128673" placeholder="ejemplo@email.com" required>
+            </div>
+
+            <div class="input-grupo">
+                <label for="propuesta-evento">Envianos tu propuesta de evento:</label>
+                <textarea id="propuesta-evento" name="entry.1296158140" rows="8" 
+                          placeholder="Propuesta, fecha, horario, ubicacion, descripción y precio" required></textarea>
+            </div>
+            
+            <div class="input-grupo boton-envio">
+                <button type="submit" id="enviar-propuesta">Enviar Propuesta</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+            
+        <!-- PAGINA PRINCIPAL-->
+
+       <div class="pagPrincipal">
+    <div class="presentacionPagPrincipal">
+        <img id="banner-rotativo" 
+             src="pagina articulos/imagenes/banner y background/evento.png" 
+             alt="Banner Principal"
+             class="fade-in"> </div>
+          
+</div>
+<div class="mapa-row">
+    
+    <div class="eventosCercaTuyo-titulo">
+        <h1 class="tituloMapa">BUSCÁ EVENTOS<br>CERCA TUYO</h1>
+    </div>
+
+    <div class="eventosCercaTuyo-mapa">
+        <div id="mapaEventos"></div>
+    </div>
+</div>
+
+<div id="modal-quienes-somos" class="modal modal-hidden">
+    
+    <div class="modal-contenido-quienes-somos">
+        
+        <span class="cerrar-modal" id="cerrar-modal-quienes-somos">&times;</span>
+
+        <div class="quienes-somos-contenido">
+            <h1>¿Quiénes somos?</h1>
+
+            <p>¡Bienvenidos a nuestra agenda cultural platense! Somos cinco estudiantes de la Facultad de Periodismo y Comunicación Social de la UNLP, unidos por una profunda pasión por la cultura, el arte y el vibrante pulso de nuestra querida ciudad de La Plata. Nos entusiasma cada evento, cada expresión artística y cada rincón donde la creatividad florece.
+                <br>
+            Nuestra misión es clara: ser tu referente principal para que estés al tanto de todo lo que sucede en La Plata. Desde los recitales más esperados y las obras de teatro que te conmoverán, hasta las ferias más originales, los ciclos de cine imperdibles y las exposiciones que despiertan la imaginación. Queremos que no te pierdas nada y que descubras la riqueza cultural que nuestra ciudad tiene para ofrecer.
+                <br>
+            Pero esta agenda es mucho más que solo un listado de eventos; es un espacio abierto y participativo, construido por y para la comunidad platense. Creemos firmemente que la cultura se construye entre todos. Por eso, si sos parte de la organización de algún evento, un artista que expone su obra, un músico que presenta su show, o simplemente tenés información sobre alguna actividad que crees que debe ser compartida, ¡te invitamos a sumarte!
+                <br>
+            Queremos que este espacio sea también tuyo. Envianos la información de tus eventos y nosotros nos encargaremos de difundirla para que más personas se enteren, participen y disfruten de la diversidad cultural de La Plata.</p>
+            
+            <h2>Nuestro Equipo</h2>
+            <p>Te invitamos a conocer a quienes hacemos posible esta agenda:</p>
+
+            <div class="equipo-fotos">
+                <div class="miembro">
+                    <img src="pagina articulos/imagenes/quienessomos/user.jpeg" alt="Foto de Bellido, Tomás">
+                    <p>Bellido, Tomás</p>
+                </div>
+                <div class="miembro">
+                    <img src="pagina articulos/imagenes/quienessomos/user.jpeg" alt="Foto de Rosales, Martina">
+                    <p>Rosales, Martina</p>
+                </div>
+                 <div class="miembro">
+                    <img src="pagina articulos/imagenes/quienessomos/user.jpeg" alt="Foto de Ciancio, Matías">
+                    <p>Ciancio, Matías</p>
+                </div>
+                <div class="miembro">
+                    <img src="pagina articulos/imagenes/quienessomos/user.jpeg" alt="Foto de Maldonado, Agustina">
+                    <p>Maldonado, Agustina</p>
+                </div>
+                <div class="miembro">
+                    <img src="pagina articulos/imagenes/quienessomos/user.jpeg" alt="Foto de Lucero, Santiago">
+                    <p>Lucero, Santiago</p>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="quienesSomos">
+    <a href="#" id="abrir-modal-quienes-somos">
+        <h1>¿QUIÉNES SOMOS?</h1><br>
+        <p>Somos cinco estudiantes de la Facultad de Periodismo y Comunicación Social apasionados por la cultura, el arte y todo lo que sucede en la ciudad de La Plata. Somos una agenda cultural abierta y participativa de La Plata.
+        <br><br>
+        Queremos que estés al tanto de todo lo que pasa: recitales, obras de teatro, ferias, ciclos de cine, exposiciones y mucho más. Pero también queremos que este espacio sea tuyo. Si organizás o formás parte de algún evento, podés enviarnos la info y lo publicamos para que más personas se enteren y participen.</p>
+    </a>
+</div>
+        <div class="pie">
+        
+        <div class="pie-izquierda">
+        <a href="https://www.tiktok.com/@bitacora.platense?_t=ZM-90nyM11jOdo&_r=1" target="_blank"> <img src="pagina articulos/imagenes/pie/tiktok.png" alt=""> </a>
+        <a href="https://www.instagram.com/bitacoraplatense" target="_blank"> <img src="pagina articulos/imagenes/pie/instagram.png" alt=""> </a>
+        </div>
+        
+<div class="pie-centro">
+        <p>bitacoraplatense@gmail.com</p>
+    </div>
+        
+       <div class="pie-derecha">
+    <div class="newsletter-content">
+        <p>Suscribite a nuestro newsletter</p>
+        
+<form id="newsletter-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Xzq0MouDYjsnP9wTFsnMrksG-wS_dgsJ0WDaELTRpIrNWQ/formResponse" method="post">
+    <input type="email" name="entry.1452529070" required placeholder="Ingresa tu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+</form>
+    </div>
+</div>
+ </div>
+</div>
+
+<div id="modal-evento" class="modal modal-hidden">
+    
+    <div class="modal-contenido">
+        
+        <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+
+
+        <form id="form-evento" 
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAB1tN7bvHW7FgAEIcTW1MfksWMMzQYUhk9YAzO1R3lL4LaA/formResponse" 
+              method="post"
+              target="hidden_iframe_evento"> 
+            
+            <div class="input-grupo">
+                <label for="email-evento">Email:</label>
+                <input type="email" id="email-evento" name="entry.428737520" placeholder="ejemplo@email.com" required>
+            </div>
+
+            <div class="input-grupo">
+                <label for="propuesta-evento">Envianos tu propuesta de evento:</label>
+                <textarea id="propuesta-evento" name="entry.1854502683" rows="8" 
+                          placeholder="Propuesta, fecha, horario, ubicacion, descripción y precio" required></textarea>
+            </div>
+            
+            <div class="input-grupo boton-envio">
+                <button type="submit" id="enviar-propuesta">Enviar Propuesta</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

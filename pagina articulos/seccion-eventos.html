@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Bitácora Platense</title>
+    <link rel="stylesheet" href="../principalAlter.css">
+</head>
+<body>
+    <div class="banner">
+        
+        <div id="contCenter">
+            <div id="logo"><a href="../PaginaPrincipal.html"><img src="imagenes/bp azul.png" alt="logo"></a>
+            </div>
+            <div id="listaArt">
+                <ul> 
+                    <li><a href="seccion-eventos.html?cat=musica">música</a></li>
+                    <li><a href="seccion-eventos.html?cat=artecultura">arte y cultura</a></li>
+                    <li><a href="seccion-eventos.html?cat=gastronomia">gastronomia</a></li>
+                    <li><a href="#" id="abrir-modal-evento">tu evento</a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+
+    <div class="principalEsOe">
+        <div class="columna">
+            <h1 id="titulo-categoria">Cargando Eventos...</h1>
+            
+            <div id="contenedor-eventos"> 
+            </div>
+            
+        </div>
+    </div>
+    
+        <div class="pie">
+        
+        <div class="pie-izquierda">
+        <a href="https://www.tiktok.com/@bitacora.platense?_t=ZM-90nyM11jOdo&_r=1" target="_blank"> <img src="imagenes/pie/tiktok.png" alt=""> </a>
+        <a href="https://www.instagram.com/bitacoraplatense" target="_blank"> <img src="imagenes/pie/instagram.png" alt=""> </a>
+        </div>
+        
+<div class="pie-centro">
+        <p>bitacoraplatense@gmail.com</p>
+    </div>
+        
+       <div class="pie-derecha">
+    <div class="newsletter-content">
+        <p>Suscribite a nuestro newsletter</p>
+        
+<form id="newsletter-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Xzq0MouDYjsnP9wTFsnMrksG-wS_dgsJ0WDaELTRpIrNWQ/formResponse" method="post">
+    <input type="email" name="entry.1452529070" required placeholder="Ingresa tu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+</form>
+    </div>
+</div>
+ </div>
+
+<div id="modal-evento" class="modal modal-hidden">
+        
+        <div class="modal-contenido">
+            
+            <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+
+
+        <form id="form-evento" 
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAB1tN7bvHW7FgAEIcTW1MfksWMMzQYUhk9YAzO1R3lL4LaA/formResponse" 
+              method="post"
+              target="hidden_iframe_evento"> 
+            
+            <div class="input-grupo">
+                <label for="email-evento">Email:</label>
+                <input type="email" id="email-evento" name="entry.428737520" placeholder="ejemplo@email.com" required>
+            </div>
+
+            <div class="input-grupo">
+                <label for="propuesta-evento">Envianos tu propuesta de evento:</label>
+                <textarea id="propuesta-evento" name="entry.1854502683" rows="8" 
+                          placeholder="Propuesta, fecha, horario, ubicacion, descripción y precio" required></textarea>
+            </div>
+            
+            <div class="input-grupo boton-envio">
+                <button type="submit" id="enviar-propuesta">Enviar Propuesta</button>
+            </div>
+        </form>
+            
+        </div> </div> <script src="../main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../principalAlter.css">
+<body>
+
+    <div class="contenedor">
+        
+    <div class="banner">
+        
+        <div id="contCenter">
+            <div id="logo"><a href="../PaginaPrincipal.html"><img src="imagenes/bp azul.png" alt="logo"></a>
+            </div>
+            <div id="listaArt">
+                <ul> 
+                    <li><a href="seccion-eventos.html?cat=musica">música</a></li>
+                    <li><a href="seccion-eventos.html?cat=artecultura">arte y cultura</a></li>
+                    <li><a href="seccion-eventos.html?cat=gastronomia">gastronomia</a></li>
+                    <li><a href="#" id="abrir-modal-evento">tu evento</a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+
+    <div class="evento-layout">
+
+        <div class="evento-imagen">
+            <img id="evento-img" src="" alt=""> 
+        </div>
+
+        <div class="evento-contenido">
+            <div id="evento-encabezado">
+            <h1 class="evento-titulo" id="evento-titulo"></h1>   
+            <p class="evento-descripcion" id="evento-descripcion"></p>
+            </div>
+            <div class="evento-detalles">
+                
+                <div class="detalle-mapa-icono">
+                    <iframe id="mini-mapa" class="mini-mapa" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="detalle-lista">
+                    <p><strong>Fecha:</strong> <span id="detalle-fecha"></span></p>
+                    <p><strong>Horario:</strong> <span id="detalle-horario"></span></p>
+                    <p><strong>Localidad:</strong> <span id="detalle-localidad"></span></p>
+                    <p><strong>Ubicación:</strong> <span id="detalle-ubicacion"></span></p>
+                    <p><strong>Entrada:</strong> <span id="detalle-costo"></span></p>
+                    <p id="p-links"><span></span></p>
+                </div>
+            </div>
+        </div> 
+    </div> 
+<div class="eventos-destacados-seccion">
+    <h2 class="destacados-titulo">Otros eventos destacados</h2>
+    
+    <div class="destacados-contenedor" id="destacados-contenedor"> 
+        </div>
+</div>
+        <div class="pie">
+        
+        <div class="pie-izquierda">
+        <a href="https://www.tiktok.com/@bitacora.platense?_t=ZM-90nyM11jOdo&_r=1" target="_blank"> <img src="imagenes/pie/tiktok.png" alt=""> </a>
+        <a href="https://www.instagram.com/bitacoraplatense" target="_blank"> <img src="imagenes/pie/instagram.png" alt=""> </a>
+        </div>
+        
+<div class="pie-centro">
+        <p>bitacoraplatense@gmail.com</p>
+    </div>
+        
+       <div class="pie-derecha">
+    <div class="newsletter-content">
+        <p>Suscribite a nuestro newsletter</p>
+        
+<form id="newsletter-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Xzq0MouDYjsnP9wTFsnMrksG-wS_dgsJ0WDaELTRpIrNWQ/formResponse" method="post">
+    <input type="email" name="entry.1452529070" required placeholder="Ingresa tu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+</form>
+    </div>
+</div>
+ </div>
+</div>
+<div id="modal-evento" class="modal modal-hidden">
+    
+    <div class="modal-contenido">
+        
+        <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+
+        <form id="form-evento" 
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAB1tN7bvHW7FgAEIcTW1MfksWMMzQYUhk9YAzO1R3lL4LaA/formResponse" 
+              method="post"
+              target="hidden_iframe_evento"> 
+            
+            <div class="input-grupo">
+                <label for="email-evento">Email:</label>
+                <input type="email" id="email-evento" name="entry.428737520" placeholder="ejemplo@email.com" required>
+            </div>
+
+            <div class="input-grupo">
+                <label for="propuesta-evento">Envianos tu propuesta de evento:</label>
+                <textarea id="propuesta-evento" name="entry.1854502683" rows="8" 
+                          placeholder="Propuesta, fecha, horario, ubicacion, descripción y precio" required></textarea>
+            </div>
+            
+            <div class="input-grupo boton-envio">
+                <button type="submit" id="enviar-propuesta">Enviar Propuesta</button>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+    
+</div>
+<script src="../main.js" defer></script>
+
+</body>
+</html>
