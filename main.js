@@ -441,7 +441,7 @@ const datosEventos = [
         titulo: "Chic@s de Oro Vol. 7",
         categoria: "musica",
         imagenSrc: "imagenes/eventos/musica/chic@sdeoro.jpg",
-        descripcion: "Casa Unclan presenta una nueva edición del ciclo Chic@s de Oro, donde la música de las chicas y colectivo LGTBIQ+ toma el protagonismo.\n\nEn esta velada de pop, rock y postpunk, se presentarán las bandas Señoras Bien y Japón, en un encuentro que celebra la diversidad, la energía y la escena independiente platense.\n\nAdemás, habrá feria y entradas anticipadas a precios accesibles.\n\nEntradas: disponibles en Passline.",
+        descripcion: "Casa Unclan presenta una nueva edición del ciclo Chic@s de Oro, donde la música de las chicas y colectivo LGTBIQ+ toma el protagonismo.\n\nEn esta velada de pop, rock y postpunk, se presentarán las bandas Señoras Bien y Japón, en un encuentro que celebra la diversidad, la energía y la escena independiente platense.\n\nAdemás, habrá feria y entradas anticipadas a precios accesibles.",
         fecha: "14 de Noviembre",
         horario: "20:00 hs",
         localidad: "La Plata",

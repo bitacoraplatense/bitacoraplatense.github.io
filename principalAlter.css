@@ -1033,148 +1033,96 @@ body, .contenedor, .pie * {
 }
 
 .evento-layout {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 100%;
-    margin: 6rem 0;
-    gap: 1rem;
-    font-family: 'Archivo', sans-serif;
-    align-items: flex-start;
-}
+        flex-direction: column; 
+        margin: 5rem 0; 
+        gap: 1rem;
+        padding: 0 1rem; /* Añadir padding lateral para no pegar a los bordes */
+    }
 
-.evento-imagen {
-    width: 25rem;
-    height: 25rem;
-}
-
-.evento-imagen img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 2rem;
-    box-shadow: 0 0 19rem rgba(0, 0, 0, 0.3);
-}
-
-.evento-contenido {
-    height: 43rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-}
-
+    /* La Imagen del Evento debe tomar el 100% del ancho */
+    .evento-imagen {
+        width: 75%;
+        height: 75vw; /* Altura basada en el ancho para una proporción adecuada */
+        order: 1; /* Posición 1: Primero la imagen */
+    }
+    
+    /* El Contenido (Título/Descripción) debajo de la imagen */
+    .evento-contenido {
+        width: 100%;
+        height: auto; /* Dejar que la altura se ajuste al contenido */
+        order: 2; /* Posición 2: Contenido */
+        /* Quitar o reducir la propiedad justify-content: space-between; para móvil */
+        justify-content: flex-start; 
+    }
 
 .evento-titulo {
     font-family: 'archivo', sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #2D3A69;
-    font-weight: 600;
-    display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    font-weight: 800;
     margin: 0 0 0 0;
 }
-
 
 .evento-descripcion {
     white-space: pre-wrap;
     font-family: 'archivo', sans-serif;
     font-size: 1rem;
-    line-height: 1.1rem;
+    line-height: 1.4rem;
     color: #2D3A69;
-    margin: 0.5rem 0 0 0;
+    margin: 1.5rem 0 0 0;
     display: -webkit-box;
-    -webkit-line-clamp: 20; 
+    -webkit-line-clamp: 15; 
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
 }
+    /* El bloque de Detalles (Mapa y Lista) debe ir debajo del Contenido */
+    .evento-detalles {
+        width: 90%;
+        order: 3; /* Posición 3: Detalles */
+        flex-direction: column; /* Apilar los elementos internos (Mapa y Lista) */
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 0.1rem solid #2d3a6930; /* Mantener un separador más sutil */
+    }
 
-.evento-detalles {
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-    margin-top: 0;
-    border-top: 0.1rem solid #2d3a6981;
-    padding-top: 1rem;
-}
-
-.detalle-mapa-icono {
-    width: 25vw;
-    height: 20vh;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 1rem;
-}
-
-.mini-mapa {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-
-.detalle-lista {
-    width: 100%;
-    padding: 0;
-}
-
-.detalle-lista p {
-    font-family: 'archivo', sans-serif;
-    font-size: 1.2vh;
-    margin: 0 0 0 0;
-    line-height: 1rem;
-    color: #2D3A69;
-}
-/* Estilo para el enlace de Entradas/Info */
+    /* Mapa y Lista dentro de Detalles */
+    .detalle-mapa-icono {
+        width: 90%; /* El mapa ocupa todo el ancho disponible */
+        height: 25vh;
+        order: 1; /* Mapa primero */
+    }
 .enlace-entradas {
-    text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+    text-decoration: underline; /* Quita el subrayado predeterminado del enlace */
     font-family: 'archivo', sans-serif; /* Mantiene la fuente 'archivo' */
-    font-size: 1.2vh; /* Mantiene el tamaño de fuente 1.7vh */
-    color: #2D3A69; 
+    font-size: 1.7vh; /* Mantiene el tamaño de fuente 1.7vh */
+    color: #8370de; 
 }
+    .detalle-lista {
+        width: 90%;
+        order: 2; /* Lista debajo del mapa */
+        padding: 0;
+    }
+    .detalle-lista p {
+        /* Aumentar el tamaño de fuente para mejor lectura en móvil */
+        font-size: 0.9rem; 
+        line-height: 1rem;
+        margin-bottom: 0rem;
+    }
+    
+    /* Asegúrate de que el contenedor de Destacados se muestre bien */
+    .eventos-destacados-seccion {
+        padding: 0 1rem;
+        margin: 3rem auto;
+    }
 
-.eventos-destacados-seccion {
-    max-width: 100%;
-    margin: 5.5rem auto 5.5rem auto; /* Centrado y con margen superior/inferior */
-    text-align: center;
-}
-
-.destacados-titulo {
-    font-family: 'Archivo', sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: #2D3A69;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.destacados-contenedor {
-    flex-direction: row;
-    display: flex;
-    justify-content: center; /* Centra las tarjetas */
-    gap: 0.5rem; 
-    flex-wrap: wrap; /* Para responsividad */
-}
-
-.destacado-tarjeta {
-    width: 30vw; /* Ancho fijo para cada tarjeta, ajusta si es necesario */
-    height: 35vh;
-    overflow: hidden;
-    border-radius: 2rem;
-    transition: transform 1s ease;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-}
-
-.destacado-tarjeta:hover {
-    transform: scale(1.03); 
-    filter: brightness(1.1);
-}
-
-.destacado-tarjeta img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra la tarjeta sin distorsionarse */
-    display: block;
-}
+    .destacados-contenedor {
+        /* Permite que las tarjetas se envuelvan y ocupen el 100% del ancho */
+        justify-content: center;
+    }
+    .destacado-tarjeta {
+        width: 45%; /* Mostrar 2 tarjetas por fila y dejar espacio de margen */
+        height: 60vw;
+    }
 
 }
