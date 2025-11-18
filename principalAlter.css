@@ -323,7 +323,7 @@ body, .contenedor, .pie * {
 
 /* Contenedor de iconos de redes (alineado al inicio) - MODIFICADO */
 .pie-izquierda{
-    padding: 0 10rem; 
+    padding: 0 10rem;
 }
 .pie-izquierda img{
     width: 4vh;
@@ -810,11 +810,11 @@ body, .contenedor, .pie * {
         /* Adaptar el tamaño de las tarjetas en función del ancho de la pantalla */
         width: 40vw; 
         height: 55vw; /* Mantener la proporción */
-        margin: 0 0 8rem 0;
     }
+#contenedor-eventos{
+    row-gap: 8rem;
+}
 
-
-/* Estilos de la imagen dentro de la tarjeta */
 .evento-tarjeta img {
     border-radius: 2rem; 
     margin: 1rem 0 0 0; 
@@ -856,6 +856,7 @@ body, .contenedor, .pie * {
         height: auto; /* Altura automática */
         flex-direction: row;
         padding: 1vh 0;
+        margin: 6rem 0 0 0;
     }
     .pie p {
         font-size: 1.2vh;
@@ -1125,4 +1126,199 @@ body, .contenedor, .pie * {
         height: 60vw;
     }
 
+}
+
+
+@media (orientation: landscape) and (max-height: 500px) {
+
+    /* Ajustamos el layout de las tarjetas de evento */
+    #contenedor-eventos {
+        /* Quizás prefieras 3 columnas ahora que hay más ancho */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+/* ⭐️ 1. CONTENEDOR PRINCIPAL (Define la fila) ⭐️ */
+.mapa-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente el mapa y el título */
+    justify-content: center; /* Centra todo el bloque (título + mapa) horizontalmente */
+    width: 100%;
+    margin: 4rem 0; 
+    gap: 5rem; /* Espacio entre el título y el mapa */
+}
+
+/* ⭐️ 2. CONTENEDOR DEL TÍTULO ⭐️ */
+.eventosCercaTuyo-titulo {
+    flex-shrink: 0; /* Asegura que el texto no se comprima */
+    text-align: center;
+ }
+
+.tituloMapa {
+    font-family: 'archivo', sans-serif;
+    color: #8370de; 
+    font-size: 2rem; 
+    font-weight: 600;
+    margin: 0; 
+    line-height: 1.2;
+}
+
+
+/* ⭐️ 3. CONTENEDOR DEL MAPA (Define el tamaño) ⭐️ */
+.eventosCercaTuyo-mapa {
+    display: flex;
+ 
+}
+
+#mapaEventos {
+    /* Las dimensiones para el diseño horizontal */
+    height: 40vh; 
+    width: 40vw; /* Ajusta este ancho */
+    max-width: 100%; 
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}
+        .quienesSomos p {
+        max-width: 60%; /* Aumentar el ancho del texto para ocupar más espacio */
+        font-size: 3.5vh;
+    }
+    .quienesSomos h1 {
+        font-size: 10vh;
+    }
+    .evento-tarjeta {
+        width: 25vw;
+        height: 70vh; 
+    }
+#contenedor-eventos{
+    row-gap: 8rem;
+    margin-bottom: 5rem;
+}
+    /* Ajustamos la imagen del evento (página de detalle) */
+    .evento-layout {
+        align-items: center; /* Centrarlo puede verse mejor */
+        margin: 1rem;
+    }
+
+    .evento-imagen {
+        width: 35vw; /* Más ancho */
+        height: 130vh; /* Altura basada en la pantalla (vh), no en el ancho (vw) */
+    }
+    
+    /* Ajustamos los destacados */
+    .destacados-contenedor {
+         /* 3 o 4 columnas ahora es posible */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+.evento-titulo {
+    font-family: 'archivo', sans-serif;
+    font-size: 1.5rem;
+    color: #2D3A69;
+    font-weight: 800;
+    margin: 6rem 0 0 0;
+}
+
+.evento-descripcion {
+    white-space: pre-wrap;
+    font-family: 'archivo', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #2D3A69;
+    margin: 1.5rem 0 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 15; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
+}
+    /* El bloque de Detalles (Mapa y Lista) debe ir debajo del Contenido */
+    .evento-detalles {
+        width: 90%;
+        flex-direction: row; /* Apilar los elementos internos (Mapa y Lista) */
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 0.1rem solid #2d3a6930; /* Mantener un separador más sutil */
+    }
+
+    /* Mapa y Lista dentro de Detalles */
+    .detalle-mapa-icono {
+        width: 45vh; 
+        height: 30vh;
+        order: 1; /* Mapa primero */
+    }
+.enlace-entradas {
+    text-decoration: underline; /* Quita el subrayado predeterminado del enlace */
+    font-family: 'archivo', sans-serif; /* Mantiene la fuente 'archivo' */
+    font-size: 1rem; /* Mantiene el tamaño de fuente 1.7vh */
+    color: #8370de; 
+}
+    .detalle-lista {
+        width: 90%;
+        order: 2; 
+        padding: 0;
+    }
+    .detalle-lista p {
+        /* Aumentar el tamaño de fuente para mejor lectura en móvil */
+        font-size: 1rem; 
+        line-height: 1rem;
+        margin-bottom: 0rem;
+    }
+    
+    /* Asegúrate de que el contenedor de Destacados se muestre bien */
+    .eventos-destacados-seccion {
+        padding: 0 1rem;
+        margin: 3rem auto;
+    }
+
+    .destacados-contenedor {
+        /* Permite que las tarjetas se envuelvan y ocupen el 100% del ancho */
+        justify-content: center;
+    }
+    .destacado-tarjeta {
+        width: 60vh; /* Mostrar 2 tarjetas por fila y dejar espacio de margen */
+        height: 30vw;
+    }
+
+        .pie {
+        height: auto; /* Altura automática */
+        flex-direction: row;
+        padding: 1vh 0;
+    }
+    .pie p {
+        font-size: 3vh;
+    }
+    .pie-izquierda, .pie-derecha {
+        padding: 0;
+    }
+    .pie-izquierda img {
+        width: 4vh;
+        height: 4vh;
+        margin: 0.5rem;
+    }
+    .pie-izquierda{
+        margin-left: 5rem;
+    }
+    .pie-derecha {
+        margin-right: 5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end;  
+}
+
+.pie-derecha input[type="email"] {
+    height: 4vh;
+    width: 40vh;
+    border: 0 solid #2d3a6900;
+    border-radius: 0.3rem;
+}
+.pie-derecha .newsletter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+    .pie-centro {
+        margin-bottom: 0.5rem;
+    }
 }
